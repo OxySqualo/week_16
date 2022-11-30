@@ -20,8 +20,18 @@ class NotesRepository {
     _box.remove(note.id); //delete
   }
 
-  Future updateNote(Note note, Note updatedNote) async {
-    _box.remove(note.id);
-    _box.put(updatedNote);
+  // Future updateNote(Note note, Note updatedNote) async {
+  //   _box.remove(note.id);
+  //   _box.put(updatedNote);
+  // }
+
+  Future updateNote(Note note) async {
+    _box.put(
+      Note(
+        id: note.id,
+        name: note.name,
+        description: note.description,
+      ),
+    );
   }
 }

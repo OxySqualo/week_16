@@ -154,7 +154,9 @@ class _NotesPageState extends State<NotesPage> {
                     final updatedNote = Note(
                         name: nameController.text,
                         description: descController.text);
-                    _notesRepo.updateNote(note, updatedNote);
+                    _notesRepo.updateNote(
+                      note,
+                    );
                     setState(() {
                       _notes = _notesRepo.notes;
                       Navigator.pop(context);
